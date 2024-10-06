@@ -1,0 +1,116 @@
+/* Main menu grid */
+#menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    padding: 5em;
+    gap: 1em;
+}
+
+#menu div {
+    display: flex;
+    justify-content: center;
+}
+
+#menu img {
+    height: 700px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 15px 15px 15px rgb(153, 153, 149);
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    #menu {
+        grid-template-columns: 1fr; /* Stack the columns */
+        height: auto; /* Remove fixed height */
+        padding: 2em; /* Reduce padding */
+        gap: 0.5em;
+    }
+
+    #menu img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 400px; /* Set a max width for medium screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #menu {
+        padding: 1em; /* Further reduce padding */
+        gap: 0.5em;
+    }
+
+    #menu img {
+        width: 100%; /* Keep image responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 300px; /* Set a smaller max width for smaller screens */
+    }
+}
+
+/* contact */
+
+/* Main contact section */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 5em;
+    background-color: #FFD95A;
+}
+
+.contact h1, h4, p {
+    text-align: center;
+    font-family: "Frank Ruhl Libre", serif;
+}
+
+.contact h1 {
+    font-size: 5rem;
+}
+
+.contact h4 {
+    font-size: 2.5rem;
+}
+
+.contact p {
+    font-size: 1.5rem;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .contact {
+        padding: 3em; /* Reduce padding for smaller screens */
+        height: auto; /* Remove fixed height */
+    }
+
+    .contact h1 {
+        font-size: 3.5rem; /* Reduce heading size */
+    }
+
+    .contact h4 {
+        font-size: 2rem; /* Reduce subheading size */
+    }
+
+    .contact p {
+        font-size: 1.25rem; /* Reduce paragraph font size */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact {
+        padding: 2em; /* Further reduce padding for smaller screens */
+    }
+
+    .contact h1 {
+        font-size: 2.5rem; /* Further reduce heading size */
+    }
+
+    .contact h4 {
+        font-size: 1.75rem; /* Further reduce subheading size */
+    }
+
+    .contact p {
+        font-size: 1rem; /* Further reduce paragraph font size */
+    }
+}

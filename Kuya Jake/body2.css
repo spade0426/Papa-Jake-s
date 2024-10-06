@@ -1,0 +1,119 @@
+/* Main body grid */
+.body2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    height: 100vh;
+    background-image: url(Images/Untitled\ design.jpg);
+}
+
+.body2 .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.left h2 {
+    font-size: 5rem;
+    text-align: center;
+    color: rgb(75, 45, 6);
+}
+
+.left a {
+    font-size: 2.5rem;
+    text-decoration: none;
+    padding: 0.5em;
+    color: rgb(22, 12, 0);
+    background-color: bisque;
+    border-radius: 20px;
+}
+
+.left a:hover {
+    transition: padding 1em;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5em;
+    padding-top: 5em;
+    gap: 20px;
+    flex-wrap: wrap ;    
+}
+
+.right img {
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.right2 {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    align-items: center;
+}
+
+.right2 div {
+    background-color: beige;
+    height: 150px;
+    width: 300px;
+    position: relative;
+    top: -60px;
+    border-radius: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+    .body2 {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        height: auto; /* Remove fixed height */
+        gap: 1em;
+        padding: 1em;
+    }
+
+    .left h2 {
+        font-size: 3rem; /* Reduce heading size */
+    }
+
+    .left a {
+        font-size: 1.5rem; /* Reduce link font size */
+        padding: 0.4em;
+    }
+
+    .right img {
+        width: 100%; /* Make image responsive */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 300px;
+    }
+
+    .right2 div {
+        width: 100%; /* Make divs responsive */
+        height: auto;
+        max-width: 300px;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .left h2 {
+        font-size: 2rem; /* Further reduce font size for smaller screens */
+    }
+
+    .left a {
+        font-size: 1.2rem;
+    }
+
+    .right img {
+        max-width: 250px;
+        width: 100%;
+    }
+
+    .right2 div {
+        max-width: 250px;
+        width: 100%;
+    }
+}
